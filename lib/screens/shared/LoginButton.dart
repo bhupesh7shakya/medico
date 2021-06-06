@@ -21,7 +21,7 @@ class LoginButton extends StatelessWidget {
         ),
         child: Text(
           title,
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: Colors.white,),
         ),
       ),
     );
