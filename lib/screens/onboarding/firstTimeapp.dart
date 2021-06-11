@@ -13,7 +13,8 @@ class MyApps extends StatelessWidget {
       initialIndex: 0,
       child: Scaffold(
         backgroundColor: Components.scaffold,
-        body: TabBarView(children: [
+        body: TabBarView(
+          children: [
           OnBoarding(
             title: "All-in-One",
             subtitle: "Apps",
@@ -43,39 +44,48 @@ class MyApps extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   alignment: Alignment.centerLeft,
                   height: 50,
-                  child: Text(
-                    "Skip",
-                    style: TextStyle(
-                        color: Components.timerbg, fontWeight: FontWeight.bold),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/mobileLogin");
+                    },
+                    child: Text(
+                      "Skip",
+                      style: TextStyle(
+                          color: Components.timerbg,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
               ),
               Expanded(
                 flex: 1,
                 child: Container(
-                    alignment: Alignment.center,
-                    height: 50,
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: TabBar(
-                        indicator: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Components.componenet,
-                        ),
-                        isScrollable: true,
-                        tabs: [
-                          Tab(
-                            child: Text(""),
-                          ),
-                          Tab(
-                            child: Text(""),
-                          ),
-                          Tab(
-                            child: Text(""),
-                          ),
-                        ],
+                  alignment: Alignment.center,
+                  height: 50,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20),
+                    child: TabBar(
+                      indicator: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Components.componenet,
                       ),
-                    ),),
+
+                      isScrollable: true,
+                      tabs: [
+                        Tab(
+                          child: Text(""),
+                        ),
+                        Tab(
+                          child: Text(""),
+                        ),
+                        Tab(
+                          child: Text(""),
+                        ),
+                        
+                      ],
+                    ),
+                  ),
+                ),
               ),
               Expanded(
                 flex: 1,

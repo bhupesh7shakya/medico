@@ -22,7 +22,6 @@ class Verify extends StatelessWidget {
               ),
               TextField(
                 keyboardType: TextInputType.number,
-                
               ),
               SizedBox(
                 height: 25,
@@ -30,7 +29,8 @@ class Verify extends StatelessWidget {
               LoginButton(
                 backgroundColor: Components.button,
                 function: () {
-                  print("login");
+                  
+                  Navigator.pushReplacementNamed(context, "/home");
                 },
                 title: "Verify",
               )

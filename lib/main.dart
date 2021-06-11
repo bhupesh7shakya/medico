@@ -18,6 +18,7 @@ void main() {
         "/mobileLogin": (context) => MobileLogin(),
         "/verify": (context) => Verify(),
         "/home": (context) => Home(),
+        "/pharmacy": (context) => Pharmacy(),
       },
     ),
   );

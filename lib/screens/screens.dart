@@ -6,3 +6,4 @@ export 'signup/mobileLogin.dart';
 export 'signup/welcomeLogin.dart';
 export 'signup/verification.dart';
 export 'home.dart';
+export 'pharmacy.dart';
