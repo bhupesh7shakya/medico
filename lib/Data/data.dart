@@ -1,6 +1,6 @@
 import 'package:medico/modals/modals.dart';
 
-List data = [
+List<Medicine> data = [
   Medicine(
       name: "Decold",
       description: "15 Tabs per Packets",

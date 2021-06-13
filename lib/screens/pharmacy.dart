@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medico/components/components.dart';
+import 'package:medico/screens/shared/customContainer.dart';
 import 'package:medico/screens/shared/shared.dart';
 
 class Pharmacy extends StatelessWidget {
   const Pharmacy({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    bool searchKeyword = true;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffa3ffe7),
@@ -29,7 +31,7 @@ class Pharmacy extends StatelessWidget {
         actions: [
           GestureDetector(
             onTap: () {
-              print("card");
+              print("cart");
             },
             child: Icon(
               Icons.shopping_cart_outlined,
@@ -42,55 +44,58 @@ class Pharmacy extends StatelessWidget {
         ],
         elevation: 0,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SearchTopBar(title: "Search for the medicine"),
-            SizedBox(
-              height: 10,
-            ),
-            // SvgPicture.asset(
-            //   "assets/images/medicine.svg",
-            //   width: 100,
-            //   height: 100,
-            // ),
-            // SizedBox(
-            //   height: 30,
-            // ),
-            // Text("Search for Medicine"),
-            SizedBox(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 15.0),
-                child: ListView(
-                  shrinkWrap: true,
-                  children: [
-                    Card(
-                      elevation: 3,
-                      child: ListTile(
-                        leading: SvgPicture.asset(
-                          "assets/images/medicine.svg",
-                          width: 15,
-                          height: 15,
-                        ),
-                        trailing: Text("Rs50.96"),
-                        title: Text(
-                          "Decold",
-                          style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.bold),
-                        ),
-                        subtitle: Text(
-                          "15 Tabs per Strip",
-                          style: TextStyle(
-                              fontSize: 10, fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
+      body: Column(
+        children: [
+          Expanded(
+              flex: 2, child: SearchTopBar(title: "Search for the medicine")),
+          // SizedBox(
+          //   height: 30,
+          // ),
+          // (searchKeyword == true)
+          //     ? SvgPicture.asset(
+          //         "assets/images/medicine.svg",
+          //         width: 100,
+          //         height: 100,
+          //       )
+          //     : SizedBox(
+          //         height: 30,
+          //       ),
+          // Text("Search for Medicine"),
+          Expanded(
+            flex: 4,
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
+              child: ListView(
+                children: [
+                  CustomContainer(
+                    shopname: "name",
+                    description: "description",
+                    medicineName: "medicineName",
+                    price: 5.0,
+                  ),
+                  CustomContainer(
+                    shopname: "name",
+                    description: "description",
+                    medicineName: "medicineName",
+                    price: 5.0,
+                  ),
+                  CustomContainer(
+                    shopname: "name",
+                    description: "description",
+                    medicineName: "medicineName",
+                    price: 5.0,
+                  ),
+                  CustomContainer(
+                    shopname: "name",
+                    description: "description",
+                    medicineName: "medicineName",
+                    price: 5.0,
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
