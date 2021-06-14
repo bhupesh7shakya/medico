@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:medico/Data/data.dart';
 import 'package:medico/components/components.dart';
 import 'package:medico/screens/shared/customContainer.dart';
 import 'package:medico/screens/shared/shared.dart';
