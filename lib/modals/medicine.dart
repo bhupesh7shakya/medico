@@ -1,4 +1,3 @@
-
 class Medicine {
   String name;
   double price;
