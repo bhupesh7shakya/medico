@@ -19,6 +19,7 @@ void main() {
         "/verify": (context) => Verify(),
         "/home": (context) => Home(),
         "/pharmacy": (context) => Pharmacy(),
+        "/cart": (context) => Cart(),
       },
     ),
   );

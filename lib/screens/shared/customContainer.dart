@@ -7,12 +7,16 @@ class CustomContainer extends StatelessWidget {
   final String medicineName;
   final String description;
   final double price;
+  final bool cart;
+  final Function function;
   const CustomContainer({
     Key key,
     this.shopname,
     this.medicineName,
     this.description,
     this.price,
+    this.cart = true,
+    this.function,
   }) : super(key: key);
 
   @override
@@ -75,15 +79,13 @@ class CustomContainer extends StatelessWidget {
                       ),
                       TextButton(
                         child: Text(
-                          "Add to cart",
+                          (cart == true) ? "Add to cart" : "Remove from cart",
                           style: TextStyle(
                             color: Components.componenet,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        onPressed: () {
-                          print("add to cart");
-                        },
+                        onPressed: function,
                       ),
                     ],
                   )

@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medico/Data/data.dart';
 import 'package:medico/components/components.dart';
+import 'package:medico/modals/medicine.dart';
 import 'package:medico/screens/shared/customContainer.dart';
 import 'package:medico/screens/shared/shared.dart';
 
-class Pharmacy extends StatelessWidget {
+class Pharmacy extends StatefulWidget {
   const Pharmacy({Key key}) : super(key: key);
+
+  @override
+  _PharmacyState createState() => _PharmacyState();
+}
+
+class _PharmacyState extends State<Pharmacy> {
+  List addToCart;
   @override
   Widget build(BuildContext context) {
-    bool searchKeyword = true;
+    // bool searchKeyword = true;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xffa3ffe7),
-        leading: GestureDetector(
-          child: Icon(
+        leading: IconButton(
+          icon: Icon(
             Icons.arrow_back_ios,
             color: Components.componenet,
           ),
-          onTap: () {
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -29,11 +38,11 @@ class Pharmacy extends StatelessWidget {
         ),
         centerTitle: false,
         actions: [
-          GestureDetector(
-            onTap: () {
-              print("cart");
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, "/cart", arguments: addToCart);
             },
-            child: Icon(
+            icon: Icon(
               Icons.shopping_cart_outlined,
               color: Components.componenet,
             ),
@@ -46,8 +55,7 @@ class Pharmacy extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Expanded(
-              flex: 2, child: SearchTopBar(title: "Search for the medicine")),
+          SearchTopBar(title: "Search for the medicine"),
           // SizedBox(
           //   height: 30,
           // ),
@@ -62,36 +70,25 @@ class Pharmacy extends StatelessWidget {
           //       ),
           // Text("Search for Medicine"),
           Expanded(
-            flex: 4,
+            flex: 9,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
-              child: ListView(
-                children: [
-                  CustomContainer(
-                    shopname: "name",
-                    description: "description",
-                    medicineName: "medicineName",
-                    price: 5.0,
-                  ),
-                  CustomContainer(
-                    shopname: "name",
-                    description: "description",
-                    medicineName: "medicineName",
-                    price: 5.0,
-                  ),
-                  CustomContainer(
-                    shopname: "name",
-                    description: "description",
-                    medicineName: "medicineName",
-                    price: 5.0,
-                  ),
-                  CustomContainer(
-                    shopname: "name",
-                    description: "description",
-                    medicineName: "medicineName",
-                    price: 5.0,
-                  ),
-                ],
+              child: ListView.builder(
+                itemCount: data.length,
+                itemBuilder: (context, index) {
+                  return CustomContainer(
+                    shopname: data[index].vender,
+                    description: data[index].description,
+                    medicineName: data[index].name,
+                    price: data[index].price,
+                    function: () {
+                      // print(index);
+                      Medicine obj = data[index];
+                      addToCart.add(obj);
+                      print(addToCart.length);
+                    },
+                  );
+                },
               ),
             ),
           ),

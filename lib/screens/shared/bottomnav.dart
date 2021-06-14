@@ -13,6 +13,8 @@ class _BottomNavState extends State<BottomNav> {
     return BottomNavigationBar(
       selectedItemColor: Components.componenet,
       unselectedItemColor: Components.timerbg,
+      selectedFontSize: 10,
+      unselectedFontSize: 10,
       showUnselectedLabels: false,
       currentIndex: currentIndex,
       items: [
@@ -42,4 +44,3 @@ class _BottomNavState extends State<BottomNav> {
     );
   }
 }
-                        
