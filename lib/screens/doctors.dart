@@ -35,7 +35,27 @@ class Doctors extends StatelessWidget {
           SearchTopBar(
             title: "Search for the Doctor",
           ),
-          SvgPicture.asset("assets/images/doctor.svg"),
+          SvgPicture.asset("assets/images/doctor.svg", width: 100),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "SEARCH DOCTORS",
+            style: TextStyle(
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Text(
+              "Search the different doctors with name ,category etc",
+              textAlign: TextAlign.center,
+            ),
+          ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(10.0),
@@ -48,23 +68,46 @@ class Doctors extends StatelessWidget {
                 ),
                 itemCount: doctorData.length,
                 itemBuilder: (context, index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: Color(0xffa3ffe7),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Center(
-                      child: Text(
-                        doctorData[index].type,
-                        style: TextStyle(color: Components.componenet),
-                      ),
-                    ),
+                  return CategoryWidget(
+                    index: index,
+                    function: () {
+                      print("hello world");
+                    },
                   );
                 },
               ),
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class CategoryWidget extends StatelessWidget {
+  final int index;
+  final Function function;
+  const CategoryWidget({
+    Key key,
+    this.index,
+    this.function,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: function,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Color(0xffa3ffe7),
+          borderRadius: BorderRadius.circular(5),
+        ),
+        child: Center(
+          child: Text(
+            doctorData[index].type,
+            style: TextStyle(color: Components.componenet),
+          ),
+        ),
       ),
     );
   }
