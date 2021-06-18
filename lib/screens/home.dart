@@ -72,7 +72,8 @@ class Home extends StatelessWidget {
                     ),
                     title: "Doctors",
                     onPress: () {
-                      print("Doctors");
+                      print("doctors");
+                      Navigator.pushNamed(context, "/doctor");
                     },
                   ),
                   CustomCard(

@@ -82,3 +82,16 @@ List<Medicine> data = [
       price: 50,
       vender: "Meds  Pharmacy pvt Ltd"),
 ];
+
+List<DoctorModal> doctorData = [
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+  DoctorModal(name: "Ram", type: "Gynologist"),
+];

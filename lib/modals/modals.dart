@@ -1,1 +1,2 @@
-export 'medicine.dart';
+export 'medicineModal.dart';
+export 'doctorModal.dart';
