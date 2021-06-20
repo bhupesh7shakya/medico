@@ -9,3 +9,4 @@ export 'home.dart';
 export 'pharmacy.dart';
 export 'cart.dart';
 export 'doctors.dart';
+export 'doctorlist.dart';

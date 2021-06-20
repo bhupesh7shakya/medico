@@ -69,9 +69,10 @@ class Doctors extends StatelessWidget {
                 itemCount: doctorData.length,
                 itemBuilder: (context, index) {
                   return CategoryWidget(
-                    index: index,
+                    cate: doctorData[index].type,
                     function: () {
-                      print("hello world");
+                      print("click");
+                      Navigator.pushNamed(context, "/doctorlist");
                     },
                   );
                 },
@@ -84,31 +85,3 @@ class Doctors extends StatelessWidget {
   }
 }
 
-class CategoryWidget extends StatelessWidget {
-  final int index;
-  final Function function;
-  const CategoryWidget({
-    Key key,
-    this.index,
-    this.function,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: function,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Color(0xffa3ffe7),
-          borderRadius: BorderRadius.circular(5),
-        ),
-        child: Center(
-          child: Text(
-            doctorData[index].type,
-            style: TextStyle(color: Components.componenet),
-          ),
-        ),
-      ),
-    );
-  }
-}
