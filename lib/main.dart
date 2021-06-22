@@ -10,7 +10,7 @@ void main() {
         fontFamily: 'Montserrat',
         primaryColor: Components.componenet,
       ),
-      initialRoute: "/doctor",
+      initialRoute: "/home",
       routes: {
         "/loading": (context) => Loading(),
         "/app": (context) => MyApps(),

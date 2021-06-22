@@ -16,15 +16,7 @@ class Home extends StatelessWidget {
           color: Components.componenet,
         ),
         actions: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20.0),
-            child: Text(
-              "Golbhatta",
-              style: TextStyle(
-                color: Components.componenet,
-              ),
-            ),
-          ),
+          LocationWidget(),
           SizedBox(
             width: 10,
           ),
@@ -108,3 +100,4 @@ class Home extends StatelessWidget {
     );
   }
 }
+

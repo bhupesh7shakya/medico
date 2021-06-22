@@ -42,7 +42,7 @@ class Doctors extends StatelessWidget {
           Text(
             "SEARCH DOCTORS",
             style: TextStyle(
-              fontSize: 25,
+              fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -52,7 +52,8 @@ class Doctors extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
             child: Text(
-              "Search the different doctors with name ,category etc",
+              "Search by directly typing the doctors name,speciality, symptoms, clinics, hospital, etc . You can also seawrch by health conerns listed below",
+              style: TextStyle(fontSize: 10),
               textAlign: TextAlign.center,
             ),
           ),
@@ -72,7 +73,8 @@ class Doctors extends StatelessWidget {
                     cate: doctorData[index].type,
                     function: () {
                       print("click");
-                      Navigator.pushNamed(context, "/doctorlist");
+                      Navigator.pushNamed(context, "/doctorlist",
+                          arguments: doctorData[index].type);
                     },
                   );
                 },
@@ -81,7 +83,7 @@ class Doctors extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: BottomNav(),
     );
   }
 }
-

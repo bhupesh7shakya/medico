@@ -8,3 +8,4 @@ export 'topbar.dart';
 export 'customCard.dart';
 export 'searchTopBar.dart';
 export 'categoryWidge.dart';
+export 'locationWidget.dart';
