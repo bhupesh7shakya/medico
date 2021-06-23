@@ -28,10 +28,10 @@ class LoginButton extends StatelessWidget {
         height: 50,
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          border: Border(
-
-              // need to add border this
-              ),
+          border: Border.all(
+              color: (border == true)
+                  ? Components.componenet
+                  : Colors.transparent),
           borderRadius: BorderRadius.circular(50),
           gradient: backgroundColor,
         ),
