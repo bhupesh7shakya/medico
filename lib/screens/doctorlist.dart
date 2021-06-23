@@ -79,7 +79,16 @@ class _DoctorListState extends State<DoctorList> {
                 return Padding(
                   padding:
                       const EdgeInsets.symmetric(horizontal: 15.0, vertical: 5),
-                  child: DoctorListCard(),
+                  child: DoctorListCard(
+                    doctorName: doctorData[index].name,
+                    degree: doctorData[index].degree,
+                    department: doctorData[index].type,
+                    experience: doctorData[index].expericence,
+                    imageUrl: doctorData[index].imgUrl,
+                    likes: 126,
+                    phoneNumber: doctorData[index].phoneNumber,
+                    price: doctorData[index].price,
+                  ),
                 );
               },
             ),
@@ -111,7 +120,15 @@ class DoctorListCard extends StatelessWidget {
   final int phoneNumber;
   final String imageUrl;
   const DoctorListCard({
-    Key key, this.doctorName, this.department, this.degree, this.price, this.experience, this.likes, this.phoneNumber, this.imageUrl,
+    Key key,
+    this.doctorName,
+    this.department,
+    this.degree,
+    this.price,
+    this.experience,
+    this.likes,
+    this.phoneNumber,
+    this.imageUrl,
   }) : super(key: key);
 
   @override
@@ -155,13 +172,13 @@ class DoctorListCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Stack(
+                      Row(
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                "Dr."+doctorName,
+                                "Dr." + doctorName,
                                 style: TextStyle(
                                     fontSize: 22,
                                     color: Colors.black87,
@@ -183,9 +200,8 @@ class DoctorListCard extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Positioned(
-                            top: -9,
-                            right: -17.5,
+                          Padding(
+                            padding: const EdgeInsets.only(left: 60),
                             child: IconButton(
                                 icon: Icon(Icons.share,
                                     size: 18, color: Components.componenet),
@@ -200,14 +216,14 @@ class DoctorListCard extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Rs "+price.toString(),
+                            "Rs " + price.toString(),
                             style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.black,
                                 fontWeight: FontWeight.w900),
                           ),
                           Text(
-                            experience.toString()+" yrs of exp.",
+                            experience.toString() + " yrs of exp.",
                             style: TextStyle(
                                 fontSize: 12,
                                 color: Colors.black,
@@ -251,7 +267,7 @@ class DoctorListCard extends StatelessWidget {
                 title: "Call",
                 backgroundColor: null,
                 function: () {
-                  print("phone number"+phoneNumber.toString());
+                  print("phone number" + phoneNumber.toString());
                 },
               ),
               LoginButton(
