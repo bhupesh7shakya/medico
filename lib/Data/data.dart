@@ -46,41 +46,6 @@ List<Medicine> data = [
       description: "15 Tabs per Packets",
       price: 50,
       vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
 ];
 
 List<DoctorModal> doctorData = [

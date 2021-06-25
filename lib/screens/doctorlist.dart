@@ -74,7 +74,7 @@ class _DoctorListState extends State<DoctorList> {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 5,
+              itemCount: doctorData.length,
               itemBuilder: (context, index) {
                 return Padding(
                   padding:
@@ -173,6 +173,7 @@ class DoctorListCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,13 +201,10 @@ class DoctorListCard extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 60),
-                            child: IconButton(
-                                icon: Icon(Icons.share,
-                                    size: 18, color: Components.componenet),
-                                onPressed: null),
-                          )
+                          IconButton(
+                              icon: Icon(Icons.share,
+                                  size: 18, color: Components.componenet),
+                              onPressed: null),
                         ],
                       ),
                       SizedBox(

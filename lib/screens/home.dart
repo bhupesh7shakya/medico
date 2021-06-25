@@ -93,11 +93,10 @@ class Home extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
       bottomNavigationBar: BottomNav(),
     );
   }
 }
-
