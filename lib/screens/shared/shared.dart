@@ -9,3 +9,4 @@ export 'customCard.dart';
 export 'searchTopBar.dart';
 export 'categoryWidge.dart';
 export 'locationWidget.dart';
+export 'doctorlistCard.dart';

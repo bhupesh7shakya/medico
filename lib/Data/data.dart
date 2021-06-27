@@ -1,31 +1,27 @@
 import 'package:medico/modals/modals.dart';
 
+List<Map> dats = [
+  {
+    "name": "Decold",
+    "description": "15 Tabs per Packets",
+    "price": 50,
+    "vender": "Meds  Pharmacy pvt Ltd",
+  },
+  {
+    "name": "Decold",
+    "description": "15 ",
+    "price": 50,
+    "vender": "Meds  Pharmacy pvt Ltd",
+  },
+];
+// List<Medicine> data = dats
+//     .map((index) => Medicine(
+//         name: index['name'],
+//         description: index["description"],
+//         price: index['price'],
+//         vender: index['vender']))
+//     .toList();
 List<Medicine> data = [
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
-  Medicine(
-      name: "Decold",
-      description: "15 Tabs per Packets",
-      price: 50,
-      vender: "Meds  Pharmacy pvt Ltd"),
   Medicine(
       name: "Decold",
       description: "15 Tabs per Packets",

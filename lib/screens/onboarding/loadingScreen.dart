@@ -9,7 +9,7 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void delayed() async {
-    await Future.delayed(Duration(seconds: 3));
+    Future.delayed(Duration(seconds: 3));
     Navigator.pushReplacementNamed(context, '/app');
   }
 

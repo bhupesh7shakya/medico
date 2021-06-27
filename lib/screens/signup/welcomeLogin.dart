@@ -20,9 +20,11 @@ class LoginPage extends StatelessWidget {
                   subtitle: "Sign up to continue",
                 ),
                 LoginButton(
-                  title: "Sing up with a Phone Number",
+                  title: "Sign up with a Phone Number",
                   backgroundColor: Components.button,
-                  function: () {},
+                  function: () {
+                    Navigator.pushNamed(context, "/mobileLogin");
+                  },
                 ),
                 SizedBox(
                   height: 10,
