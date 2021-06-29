@@ -88,6 +88,9 @@ class _DoctorListState extends State<DoctorList> {
                     likes: 126,
                     phoneNumber: doctorData[index].phoneNumber,
                     price: doctorData[index].price,
+                    booking: () {
+                      Navigator.pushNamed(context, "/book");
+                    },
                   ),
                 );
               },
@@ -109,4 +112,3 @@ class _DoctorListState extends State<DoctorList> {
     );
   }
 }
-

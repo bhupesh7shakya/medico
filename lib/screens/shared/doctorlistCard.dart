@@ -13,6 +13,7 @@ class DoctorListCard extends StatelessWidget {
   final int likes;
   final int phoneNumber;
   final String imageUrl;
+  final Function booking;
   const DoctorListCard({
     Key key,
     this.doctorName,
@@ -24,6 +25,7 @@ class DoctorListCard extends StatelessWidget {
     this.phoneNumber,
     this.imageUrl,
     this.id,
+    this.booking,
   }) : super(key: key);
 
   @override
@@ -164,13 +166,10 @@ class DoctorListCard extends StatelessWidget {
                 },
               ),
               LoginButton(
-                small: true,
-                title: "Book",
-                backgroundColor: Components.button,
-                function: () {
-                  print("call");
-                },
-              ),
+                  small: true,
+                  title: "Book",
+                  backgroundColor: Components.button,
+                  function: booking),
             ],
           ),
         ],

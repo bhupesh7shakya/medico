@@ -10,3 +10,5 @@ export 'pharmacy.dart';
 export 'cart.dart';
 export 'doctors.dart';
 export 'doctorlist.dart';
+export 'schedule.dart';
+export 'book.dart';

@@ -20,6 +20,7 @@ class TextBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      
       keyboardType: keyboardType,
       maxLength: length,
       decoration: InputDecoration(

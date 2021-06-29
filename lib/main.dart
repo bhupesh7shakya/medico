@@ -22,6 +22,7 @@ void main() {
         "/cart": (context) => Cart(),
         "/doctor": (context) => Doctors(),
         "/doctorlist": (context) => DoctorList(),
+        "/schedule": (context) => Schedule(),
       },
     ),
   );

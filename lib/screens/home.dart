@@ -76,7 +76,7 @@ class Home extends StatelessWidget {
                     ),
                     title: "Schedule",
                     onPress: () {
-                      print("Schedule");
+                      Navigator.pushNamed(context, "/schedule");
                     },
                   ),
                   CustomCard(
