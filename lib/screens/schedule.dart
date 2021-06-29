@@ -1,9 +1,6 @@
-import 'dart:ffi';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medico/components/components.dart';
-import 'package:medico/screens/screens.dart';
 import 'package:medico/screens/shared/shared.dart';
 
 class Schedule extends StatefulWidget {
@@ -14,17 +11,6 @@ class Schedule extends StatefulWidget {
 }
 
 class _ScheduleState extends State<Schedule> {
-  String date;
-
-  Future pickDate(BuildContext context) async {
-    final initialDate = DateTime.now();
-    final date = showDatePicker(
-        context: context,
-        initialDate: initialDate,
-        firstDate: DateTime(DateTime.now().year),
-        lastDate: DateTime(DateTime.now().year + 1));
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,13 +57,13 @@ class _ScheduleState extends State<Schedule> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     DatePicker(
-                      date: date,
+                      date: null,
                       title: "Start",
                       width: 150,
                       onpress: null,
                     ),
                     DatePicker(
-                      date: date,
+                      date: null,
                       title: "End",
                       width: 150,
                       onpress: null,
@@ -89,7 +75,7 @@ class _ScheduleState extends State<Schedule> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     DatePicker(
-                      date: date,
+                      date: null,
                       title: "Time",
                       width: 100,
                       onpress: null,
